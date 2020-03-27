@@ -1,0 +1,71 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Persons page";
+}
+
+<h4>Paged list of Persons (@Model.Persons.TotalItems) [AdventureWorks2016]</h4>
+<hr />
+@{
+    TimeZoneInfo cstZone = TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time");
+}
+<form>
+    <p>
+        First Name: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+<table class="table table-sm table-striped table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">MiddleName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">Modified</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model.Persons.Items)
+        {
+            <tr>
+                <th scope="row">@person.BusinessEntityID</th>
+                <td>@person.FirstName</td>
+                <td>@person.MiddleName</td>
+                <td>@person.LastName</td>
+                @{
+                    var modifiedDateTime = person.ModifiedDate > DateTime.MinValue ? TimeZoneInfo.ConvertTimeFromUtc(person.ModifiedDate, cstZone).ToString("dd.MM.yyyy HH:mm:ss") : "N/A";
+                }
+                <td>@modifiedDateTime</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.Persons.PageNumbers.Any())
+{
+    <nav class="table-responsive">
+        <ul class="pagination justify-content-center d-flex flex-wrap">
+            <li class="page-item @(Model.Persons.PageNumber > 1 ? "enabled" : "disabled")">
+                <a class="page-link" href="/">First</a>
+            </li>
+            <li class="page-item @(Model.Persons.PageNumber > 1 ? "enabled" : "disabled")">
+                <a class="page-link" href="/?pageNumber=@(Model.Persons.PageNumber - 1)">Prev</a>
+            </li>
+
+            @foreach (var pageNumber in Model.Persons.PageNumbers)
+            {
+                <li class="page-item @(pageNumber == Model.Persons.PageNumber ? "active" : "")">
+                    <a class="page-link" href="/?pageNumber=@pageNumber">@pageNumber</a>
+                </li>
+            }
+
+            <li class="page-item @(Model.Persons.PageNumber < Model.Persons.TotalPages ? "enabled" : "disabled")">
+                <a class="page-link" href="/?pageNumber=@(Model.Persons.PageNumber + 1)">Next</a>
+            </li>
+            <li class="page-item @(Model.Persons.PageNumber < Model.Persons.TotalPages ? "enabled" : "disabled")">
+                <a class="page-link" href="/?pageNumber=@(Model.Persons.TotalPages)">Last</a>
+            </li>
+        </ul>
+    </nav>
+}
