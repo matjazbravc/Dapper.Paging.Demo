@@ -137,7 +137,7 @@ namespace Dapper.Razor.Demo.Services.Repositories
                 // Set first query
                 var whereStatement = string.IsNullOrWhiteSpace(searchString) ? "" : $"WHERE [FirstName] LIKE '{searchString}'";
                 var queries = @$"
-                SELEC
+                SELECT
                     [BusinessEntityID],
                     [PersonType],
                     [Title],
@@ -149,7 +149,7 @@ namespace Dapper.Razor.Demo.Services.Repositories
                 {whereStatement}
                 ORDER BY [BusinessEntityID]
                 OFFSET @PageSize * (@PageNumber - 1) ROWS
-                FETCH NEXT @PageSize ROWS ONLY;"
+                FETCH NEXT @PageSize ROWS ONLY;";
 
                 // Set second query, separated with semi-colon
                 queries += "SELECT COUNT(*) AS TotalItems FROM [Person].[Person] (NOLOCK);";
