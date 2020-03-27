@@ -41,7 +41,7 @@ We have to setup connection to SQL Server instance:
         "Args": {
           "path": "./Log/DemoLog.txt",
           "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] [{MemberName}] {Message}{NewLine}{Exception}",
-          "fileSizeLimitBytes": 1073741824, // 1Gb
+          "fileSizeLimitBytes": 1073741824,
           "rollingInterval": "Day",
           "rollOnFileSizeLimit": true,
           "restrictedToMinimumLevel": "Information",
@@ -179,8 +179,8 @@ namespace Dapper.Razor.Demo.Services.Repositories
     }
 }
 ```
-The key for retrieving paged items we are using SQL OFFSET-FETCH Clause which were introduced with SQL Server 2012 and which are great for building pagination support.
-Some additional informations about SQL OFFSET-FETCH Clause you can find [here](https://www.geeksforgeeks.org/sql-offset-fetch-clause/).
+The key for retrieving paged items we are using **SQL OFFSET-FETCH Clause** which were introduced with SQL Server 2012 and which are great for building pagination support.
+Some additional informations about **SQL OFFSET-FETCH Clause** you can find [here](https://www.geeksforgeeks.org/sql-offset-fetch-clause/).
 
 According to input parameters we are returning Paged results with this helper class:
 ```csharp
