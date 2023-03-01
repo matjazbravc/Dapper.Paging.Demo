@@ -59,10 +59,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseCors();
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapRazorPages();
-});
+app.MapRazorPages();
 
 app.UseMvc();
 

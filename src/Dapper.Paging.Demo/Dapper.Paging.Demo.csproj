@@ -5,15 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Startup.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Log\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Startup.cs" />
   </ItemGroup>
 
   <ItemGroup>
