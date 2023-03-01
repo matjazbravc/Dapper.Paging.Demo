@@ -1,8 +1,7 @@
 ﻿using Dapper.Paging.Demo.Models;
-using Dapper.Paging.Demo.Services;
 using System.Threading.Tasks;
 
-namespace Dapper.Razor.Demo.Services.Repositories
+namespace Dapper.Paging.Demo.Services.Repositories
 {
     public interface IPersonRepository
     {

@@ -1,11 +1,10 @@
 ﻿using Dapper.Paging.Demo.Configuration;
 using Dapper.Paging.Demo.Models;
-using Dapper.Paging.Demo.Services;
 using Microsoft.Extensions.Options;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 
-namespace Dapper.Razor.Demo.Services.Repositories
+namespace Dapper.Paging.Demo.Services.Repositories
 {
     /// <summary>
     /// Persons repository

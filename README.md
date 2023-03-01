@@ -435,15 +435,15 @@ This example demonstrate also the following functionalities:
 - Logging with [Serilog](https://serilog.net/) sink to file
 
 ## Prerequisites
-- [Visual Studio](https://www.visualstudio.com/vs/community) 2019 16.4.5 or greater
-- [.NET Core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [Visual Studio](https://www.visualstudio.com/vs/community) 2022 17.5.x or greater
+- [.NET SDK 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
 
 ## Tags & Technologies
-- [ASP.NET Core 3.1](https://docs.microsoft.com/en-us/aspnet/?view=aspnetcore-3.1#pivot=core)
-- [ASP.NET Core 3.1 Razor Pages](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-3.1&tabs=visual-studio)
+- [.NET 7.0](https://github.com/dotnet/core/blob/main/release-notes/7.0/7.0.3/7.0.3.md)
+- [ASP.NET Core 7.0](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-7.0?view=aspnetcore-7.0)
+- [ASP.NET Core Razor Pages](https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-7.0&tabs=visual-studio)
+- [SQLite](https://sqlite.org/index.html)
 - [Dapper](https://github.com/StackExchange/Dapper)
-
-Enjoy!
 
 ## Licence
 Licenced under [MIT](http://opensource.org/licenses/mit-license.php).

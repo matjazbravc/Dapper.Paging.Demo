@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Dapper.Razor.Demo.Extensions
+namespace Dapper.Paging.Demo.Extensions
 {
     /// <summary>
     /// Configure options

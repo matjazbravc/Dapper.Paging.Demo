@@ -1,6 +1,6 @@
 ﻿using Dapper.Paging.Demo.Models;
+using Dapper.Paging.Demo.Services.Repositories;
 using Dapper.Paging.Demo.Services;
-using Dapper.Razor.Demo.Services.Repositories;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
