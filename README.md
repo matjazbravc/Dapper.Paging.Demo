@@ -442,7 +442,6 @@ This example demonstrate also the following functionalities:
 - [.NET 7.0](https://github.com/dotnet/core/blob/main/release-notes/7.0/7.0.3/7.0.3.md)
 - [ASP.NET Core 7.0](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-7.0?view=aspnetcore-7.0)
 - [ASP.NET Core Razor Pages](https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-7.0&tabs=visual-studio)
-- [SQLite](https://sqlite.org/index.html)
 - [Dapper](https://github.com/StackExchange/Dapper)
 
 ## Licence
